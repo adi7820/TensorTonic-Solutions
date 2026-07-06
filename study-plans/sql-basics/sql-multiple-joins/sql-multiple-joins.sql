@@ -1,0 +1,2 @@
+-- Write your SQL query heres
+select u.username, e.experiment_name, e.variant, c.revenue from users as u inner join experiment_assignments as e on u.id = e.user_id inner join conversions as c on e.user_id = c.user_id order by e.experiment_name, c.revenue DESC, u.username;
